@@ -27,7 +27,7 @@ app.use(express.urlencoded({ limit: "300mb", extended: true }))
 
 app.use(cors({
   origin: "https://ai-quest.netlify.app", // Frontend origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'],
   credentials: true, // Allow credentials
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
