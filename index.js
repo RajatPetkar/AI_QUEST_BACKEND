@@ -12,6 +12,7 @@ import Questions from './models/questions.js';
 import bodyParser from "body-parser";
 // import companyRoutes from "./routes/companies.js";
 import { companyController } from "./controllers/company.js";
+import Company from "./models/company.js";
 
 // import fetchDataAndSendToPython from "./model/index.js";
 
@@ -42,8 +43,17 @@ app.use('/api/company',companyController)
 
 
 app.get('/', (req, res) => {
-  res.send("This is a stack overflow clone's API by Rajat Petkar")
+  res.send("This is an API by Rajat Petkar & Atharv Joshi")
 })
+
+app.get('/api/companies', async (req, res) => {
+  try {
+    const companies = await Company.find();
+    res.json(companies);
+  } catch (error) {
+    res.status(500).send('Server Error');
+  }
+});
 
 // app.get('/api/fetch-data', async (req, res) => {
 //   try {
