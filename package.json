@@ -8,7 +8,7 @@
     "start": "nodemon index.js",
     "server": "node index.js"
   },
-  "author": "Gautam Jha",
+  "author": "Rajat Petkar",
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
